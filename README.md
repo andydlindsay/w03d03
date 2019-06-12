@@ -1,45 +1,44 @@
 # W03D03 AJAX
 
 ### To Do
-- [ ] Use AJAX to retrieve data from a remote server
-- [ ] Use jQuery to update the DOM with the retrieved data
-- [ ] Use AJAX to submit data to a remote server
-- [ ] All without refreshing the browser
+- [x] Use AJAX to retrieve data from a remote server
+- [x] Use jQuery to update the DOM with the retrieved data
+- [x] Use AJAX to submit data to a remote server
+- [x] All without refreshing the browser
 
-## AJAX
+### What is AJAX?
 
-Asynchronous Javascript And XML
+**A**synchronous **J**avaScript **A**nd **X**ML
 
-XMLHttpRequest (XHR)
+Invented by Microsoft for Outlook Web Access as a way of replicating desktop application functionality in the browser
+
+Thanks to AJAX, web applications can send and receive data asynchronously without requiring a browser refresh
+
+The widespread use of AJAX was one of the factors that led to Web 2.0
+
+Originally retrieved data sent using `XML`, but modern applications use `JSON` instead
+
+### XMLHttpRequest Object
+
+AJAX is implemented using the `XMLHttpRequest` (`XHR`) object
+
+Modern libraries (such as `jQuery` or `axios`) provide us with easy-to-use wrappers for the `XHR` object
+
+### jQuery AJAX Example
 
 ```js
 $.ajax({
-    url: 'www.example.com/posts',
+    url: 'https://jsonplaceholder.typicode.com/posts',
     method: 'GET',
-    dataType: 'json',
+    dataType: "json",
     success: (data) => {
-        console.log('ajax executed successfully and here\'s the data', data);
+        console.log('this request succeeded and here\'s the data', data);
     },
     error: (error) => {
-        console.error('errors happened', error);
+        console.log('this request failed and this was the error', error);
     }
 });
-```js
-
-API - Application Programming Interface
-
-
-
-
-
-
-
-
-
-
-
-
-
+```
 
 ### Useful Links
 * [Blog post coining AJAX](https://web.archive.org/web/20160305044414/http://adaptivepath.org/ideas/ajax-new-approach-web-applications/)
