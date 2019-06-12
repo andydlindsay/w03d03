@@ -6,8 +6,27 @@
 - [ ] Use AJAX to submit data to a remote server
 - [ ] All without refreshing the browser
 
+## AJAX
 
+Asynchronous Javascript And XML
 
+XMLHttpRequest (XHR)
+
+```js
+$.ajax({
+    url: 'www.example.com/posts',
+    method: 'GET',
+    dataType: 'json',
+    success: (data) => {
+        console.log('ajax executed successfully and here\'s the data', data);
+    },
+    error: (error) => {
+        console.error('errors happened', error);
+    }
+});
+```js
+
+API - Application Programming Interface
 
 
 
